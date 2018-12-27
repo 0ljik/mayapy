@@ -30,8 +30,12 @@ for i in range(len(keys)):
 #duplicate -rr;
 #move -r 2.602818 0 0 HerkuleX__DRS_010X.scalePivot HerkuleX__DRS_010X.rotatePivot ;
 #move -r 2.602818 0 0 HerkuleX__DRS_010X1.scalePivot HerkuleX__DRS_010X1.rotatePivot ;
-for i in range(20):
-    select('HerkuleX__DRS_010X', r=True)
-    duplicate(rr=True)
-    move -r 2.602818 0 0 getattr(. , "HerkuleX__DRS_010X"+str(i+1)).scalePivot getattr(. , "HerkuleX__DRS_010X"+str(i+1)).rotatePivot ;
-    file('C:/Users/oljak/OneDrive/Documents/JOINT/[HerkuleX] DRS-010X.stp', i=True)
+ 
+importpath='C:/workspace/maya/herkulex/'
+filename='[HerkuleX] DRS-010X.stp'
+filepath=importpath+filename
+cmds.file(filepath, i=True)
+for i in range(19):
+    cmds.select('HerkuleX__DRS_010X', r=True)
+    cmds.duplicate(rr=True)
+    cmds.move(2.602818, 0, 0, 'HerkuleX__DRS_010X'+str(i+1)+'.scalePivot', 'HerkuleX__DRS_010X'+str(i+1)+'.rotatePivot', r=True)
