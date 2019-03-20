@@ -31,11 +31,15 @@ for i in range(len(keys)):
 #move -r 2.602818 0 0 HerkuleX__DRS_010X.scalePivot HerkuleX__DRS_010X.rotatePivot ;
 #move -r 2.602818 0 0 HerkuleX__DRS_010X1.scalePivot HerkuleX__DRS_010X1.rotatePivot ;
  
-importpath='C:/workspace/maya/herkulex/'
-filename='[HerkuleX] DRS-010X.stp'
+#importpath='C:/workspace/maya/herkulex/'
+#filename='[HerkuleX] DRS-010X.stp'
+#filepath=importpath+filename
+#cmds.file(filepath, i=True)
+#for i in range(19):
+#    cmds.select('HerkuleX__DRS_010X', r=True)
+#    cmds.duplicate(rr=True)
+#    cmds.move(2.602818, 0, 0, 'HerkuleX__DRS_010X'+str(i+1)+'.scalePivot', 'HerkuleX__DRS_010X'+str(i+1)+'.rotatePivot', r=True)
+importpath='E:/workspace/hovis/'
+filename='herkulex.mb'
 filepath=importpath+filename
 cmds.file(filepath, i=True)
-for i in range(19):
-    cmds.select('HerkuleX__DRS_010X', r=True)
-    cmds.duplicate(rr=True)
-    cmds.move(2.602818, 0, 0, 'HerkuleX__DRS_010X'+str(i+1)+'.scalePivot', 'HerkuleX__DRS_010X'+str(i+1)+'.rotatePivot', r=True)
